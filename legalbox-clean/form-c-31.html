@@ -1,0 +1,50 @@
+<div class="form-found">
+    <p class="text-title">Использование Программы для ЭВМ осуществляется на территории:</p>
+    <div class="help-tip">
+        <p>Укажите в пределах какой территории пользователи имеют право использовать программу для ЭВМ </p>
+    </div>
+    <div class="form-checkbox-item">
+        <input type="radio" id="fc43019049" name="Pmzd8B" >
+        <label for="fc43019049">Российской Федерации</label>
+    </div>
+    <div class="form-checkbox-item">
+        <input type="radio" id="fc10482648" name="Pmzd8B">
+        <label for="fc10482648">Всего мира</label>
+
+    </div>
+    <div class="form-checkbox-item form-double">
+        <input type="radio" id="fc95593445" name="Pmzd8B">
+        <label for="fc95593445">Иная территория <input class="form-input" type="text"/> </label>
+    </div>
+    <a href="#" id = "add17" class="add-form bttn form-hidden">Добавить территорию</a>
+    <script>
+        $('.form-found').on('change', function () {
+            if ($('#fc95593445').is(':checked')) {
+                $('.add-form.bttn').removeClass('form-hidden');
+            } else if ($('#fc10482648').is(':checked')) {
+                $('.add-form.bttn').addClass('form-hidden');
+                $('.editional-input').hide();
+            } else {
+                $('.add-form.bttn').addClass('form-hidden');
+                $('.editional-input').hide();
+            }
+        });
+        var new_id = 1;
+        $('#add17').on('click', function (e) {
+            e.preventDefault();
+            new_id += 1;
+            $(this).siblings('.form-checkbox-item.form-double').append(
+                '<div class="form-found form-first editional-input">' +
+                '<div class="form-inn">' +
+                '<input type="text" class="form-input" id="ra1511111' + new_id + '"  name = "ra1511111' + new_id + '">' +
+                '</div>' +
+                '<button class="del-item"></button>'+
+                '</div>');
+
+        });
+        $('body').on('click','.del-item', function (e) {
+            e.preventDefault();
+            $(this).parent().hide();
+        });
+    </script>
+</div>

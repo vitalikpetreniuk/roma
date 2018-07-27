@@ -1,0 +1,148 @@
+<div class="form-found">
+    <p class="text-title">Укажите Ваш ИНН</p>
+    <div class="help-tip">
+        <p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
+    </div>
+
+    <div class="form-inn">
+        <input id="inn" class="form-input form-input-big input-inn" type="text" placeholder="132808730606">
+    </div>
+    <br>
+    <!-- sample for Entrepreneur - 132808730606 , for legal-person  - 5262321353 -->
+
+    <div class="form-found form-hidden" id="legal-person-c34">
+        <div class="form-found-list">
+            <div class="form-found-item">
+                <span>Наименование</span>
+                <input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+            <div class="form-found-item">
+                <span>ОГРН</span>
+                <input class="form-input" id="ogrn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+            <div class="form-found-item">
+                <span>КПП</span>
+                <input class="form-input" id="kpp" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+            <div class="form-found-item">
+                <span>Место нахождения</span>
+                <input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+            <div class="form-found-item">
+                <span>Фактический адрес местонахождения совпадает с юридическим?</span>
+                <div class="help-tip">
+                    <p>Если адрес фактического местонахождения Вашей компании отличается от адреса, указанного при ее государственной регистрации в налоговом органе, укажите это.</p>
+                </div>
+                <div class="form-checkbox-list">
+                    <div class="form-checkbox-item">
+                        <input type="radio" id="fc3" name="c34flqT7gE" >
+                        <label for="fc3">Да</label>
+
+                    </div>
+                    <div class="form-checkbox-item">
+                        <input type="radio" id="fc4" name="c34flqT7gE">
+                        <label for="fc4">Нет</label>
+                        <script>
+
+                            $('input:radio[name=c34flqT7gE]').on('change', function () {
+                                if($('#fc3').is(':checked')){
+                                    $('#actual-address-form-c34').addClass('form-hidden');
+                                }else if($('#fc4').is(':checked')){
+                                    $('#actual-address-form-c34').removeClass('form-hidden');
+                                }
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+            <div class="form-found-item form-hidden" id="actual-address-form-c34" >
+                <span>Укажите фактический адрес местонахождения</span>
+                <input class="form-input" id="adressfact-c34" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+
+        </div>
+    </div>
+
+    <div class="form-found form-hidden" id="entrepreneur-c34" >
+        <div class="form-found-list">
+            <div class="form-found-item">
+                <span>ФИО</span>
+                <input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+            <div class="form-found-item">
+                <span>ОГРНИП</span>
+                <input class="form-input" type="text" id="ogrnip" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+            </div>
+
+        </div>
+
+    </div>
+    <script>
+        $(document).ready(function() {
+
+            $('#inn').on('input', function() {
+                var value = $(this).val().trim();
+                $(this).val(value);
+                var settings = {
+                    "async": true,
+                    "crossDomain": true,
+                    "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
+                    "method": "GET",
+                    "headers": {
+                        "content-type": "application/json",
+                        "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
+                        "accept": "application/json",
+                        "cache-control": "no-cache",
+                        "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
+                    },
+                    "processData": false,
+                    "data": "{ \"query\": \"7719402047\" }"
+                };
+                if (this.value.length == 10) {
+                    $.ajax(settings).done(function(response) {
+                        if (response["suggestions"].length == 0) {
+                            $('#company_name').val("");
+                            $('#ogrn').val("");
+                            $('#kpp').val("");
+                            $('#adress').val("");
+                            $(".pop-up__validity--inn").addClass('active');
+                            return;
+                        }
+                        var responseJson = response["suggestions"][0];
+                        $('#company_name').val(responseJson["value"]);
+                        $('#ogrn').val(responseJson["data"]["ogrn"]);
+                        $('#kpp').val(responseJson["data"]["kpp"]);
+                        $('#adress').val(responseJson["data"]["address"]["value"]);
+
+                        console.log(JSON.stringify(response));
+                    });
+                    $('#legal-person-c34').removeClass('form-hidden');
+                } else {
+                    $('#legal-person-c34').addClass('form-hidden');
+                }
+                if (this.value.length == 12) {
+
+                    //same thing: open form, autofill it for entrepreneur
+
+                    $.ajax(settings).done(function(response) {
+                        if (response["suggestions"].length == 0) {
+                            $('#fio').val("");
+                            $('#ogrnip').val("");
+                            $(".pop-up__validity--inn").addClass('active');
+                            return;
+                        }
+
+                        var responseJson = response["suggestions"][0];
+                        $('#fio').val(responseJson["value"]);
+                        $('#ogrnip').val(responseJson["data"]["ogrn"]);
+
+                    });
+                    $('#entrepreneur-c34').removeClass('form-hidden');
+                } else {
+                    $('#entrepreneur-c34').addClass('form-hidden');
+                }
+
+            });
+        });
+    </script>
+</div>

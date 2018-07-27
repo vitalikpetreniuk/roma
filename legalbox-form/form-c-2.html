@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form-c-2</title>
+
+	<!--styles-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
+	<link rel="stylesheet" href="css/forms.css">
+	<link rel="stylesheet" href="css/forms-media.css">
+	<!--styles end-->
+
+	<!--jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!--jQuery library end -->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="menu-block">
+        <div class="container">
+            <div class="menu-block-header">
+                <div class="menu-block-logo"><a href="#"><img src="img/logo-footer.svg" alt="logo"></a></div>
+                <div class="menu-block-close">
+                    <button type="button"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="menu-block-body">
+                <ul>
+                    <li>
+                        <a href="#">Микросервисы</a>
+                    </li>
+                    <li>
+                        <a href="#">Цены</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-block-footer">
+                <div class="text-center">
+                    <div class="login-button"><a href="#" class="bttn bttn-secondary">Вход / Регистрация</a></div>
+                </div>
+                <div class="socials">
+                    <a href="#"><img src="img/telegram.png" alt="telegram"></a>
+                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<header>
+		<div class="container">
+			<div class="header-in">
+				<div class="logo-top">
+					<a href="#"><img src="img/logo-top.svg" alt="logo"></a>
+				</div>
+				<div class="menu-toggle">
+					<button type="button"><span></span></button>
+				</div>
+				<div class="header-block">
+					<div class="top-menu">
+						<ul>
+							<li>
+								<a href="#">Микросервисы</a>
+							</li>
+							<li>
+								<a href="#">Цены</a>
+							</li>
+							<li>
+								<a href="#">Блог</a>
+							</li>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login-button">
+						<a href="#" class="bttn bttn-secondary">Вход / Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="body-block">
+		<section class="section-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-offset-2 col-lg-8 col-xs-12">
+						<h1>Пользовательское соглашение</h1>
+						<p class="section-form-top-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-form-mid">
+				<div class="container">
+					<div class="row row-flex">
+						<div class="col-md-8 col-form-b">
+							<div class="form-step form-step-offset">
+								<div class="form-step-nav">
+									<span>01</span><span>9</span>
+								</div>
+								<div class="form-step-cont">
+									<form>
+										<div class="sliding-questions">
+											<div class="question-in-slider">
+												<div class="form-found">
+													<p class="text-title">Данные каких категорий субъектов вы обрабатываете?</p>
+													<div class="form-checkbox-list">
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc87564436" name="ez0uuS">
+															<label for="fc87564436">Пользователи сайта</label>
+															<script>
+																$('input:checkbox[name=ez0uuS]').change(function() {
+																	if (this.id == 'fc87564436') $('#users-of-the-site').toggle('display');
+
+																});
+															</script>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc54379541" name="ez0uuS">
+															<label for="fc54379541">Работники</label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc31848076" name="ez0uuS">
+															<label for="fc31848076">Сотрудники по договору гпх </label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc35388101" name="ez0uuS">
+															<label for="fc35388101">Соискатели вакантных мест </label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc59879071" name="ez0uuS">
+															<label for="fc59879071">Клиенты (физические лица) </label>
+														</div>
+														<div class="form-checkbox-item">
+															<input type="checkbox" id="fc51537436" name="ez0uuS">
+															<label for="fc51537436">Работники контрагента </label>
+														</div>
+													</div>
+												</div>
+												<div class="form-found-list form-hidden" id="users-of-the-site">
+													<div class="form-found-item form-equal-width">
+														<span>Укажите адрес сайта:</span>
+														<input class="form-input" type="text" id="websiteAddress" placeholder="_ _ _ _ _ _">
+														<div class="help-tip">
+															<p>Укажите URL - адрес, на котором будут размещены публичные оферты. Например: http://www.site.com</p>
+														</div>
+													</div>
+													<div class="form-found-item form-equal-width form-align-start">
+														<span>Количество пользователей вашего сайта, чьи персональные хранятся у вас (за все время):</span>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc70967434" name="PzHPq3" >
+																<label for="fc70967434">Больше 100 000 человек</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc83897756" name="PzHPq3">
+																<label for="fc83897756">Меньше 100 000 человек</label>
+															</div>
+														</div>
+													</div>
+													<div class="form-found-item form-equal-width form-align-start">
+														<span>Цели получения персональных данных пользователей:</span>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc41829479" name="4PRZ0D" >
+																<label for="fc41829479">Заключение и исполнение договоров</label>
+															</div>
+															<!-- zakl_isp_dog -->
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc36435752" name="4PRZ0D">
+																<label for="fc36435752">Информирование о новых товарах, услугах</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc07414744" name="4PRZ0D">
+																<label for="fc07414744">Подготовка индивидуальных предложений</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc00263589" name="4PRZ0D">
+																<label for="fc00263589">Ведения рекламной деятельности</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc64539070" name="4PRZ0D">
+																<label for="fc64539070">Предоставление пользователям доступа к специальной информациии</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc64650014" name="4PRZ0D">
+																<label for="fc64650014">Обработка заявок на сайте</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc54282880" name="4PRZ0D">
+																<label for="fc54282880">Публикация на сайте, информации о клиентах, работниках</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc02070153" name="4PRZ0D">
+																<label for="fc02070153">Иная цель</label><br><br>
+																<div class="form-found-item">
+																	<input type="text" class="form-input" id="another_goal_personal_data_text" name="4PRZ0D">
+																</div>
+															</div>
+														</div>
+													</div>
+													<div class="form-found-item form-equal-width form-align-start">
+														<span>Пользователь дает свое согласие на обработку его данных следующим путем:</span>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc44278210" name="TjtwYG" >
+																<label for="fc44278210">Проставления «галочки»</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc37768763" name="TjtwYG">
+																<label for="fc37768763">Ввода смс-кода, направленного на мобильный телефон</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc49047949" name="TjtwYG">
+																<label for="fc49047949">Прохождения по ссылке, направленной на почту</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="radio" id="fc30549879" name="TjtwYG">
+																<label for="fc30549879">Иным образом </label><br><br>
+															</div>
+															<div class="form-found-item">
+																<input type="text" class="form-input" id="another_goal_data_obrab_text">
+															</div>
+														</div>
+													</div>
+													<div class="form-found-item form-equal-width form-align-start">
+														<span>Виды обрабатываемых персональных данных пользователей</span>
+														<div class="form-checkbox-list">
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc34" name="ZX9tvR" >
+																<label for="fc34">Фамилия</label>
+															</div>
+															<!-- zakl_isp_dog -->
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc35" name="ZX9tvR">
+																<label for="fc35">Имя</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc36" name="ZX9tvR">
+																<label for="fc36">Отчество</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc37" name="ZX9tvR">
+																<label for="fc37">Дата рождения</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc46" name="ZX9tvR">
+																<label for="fc46">Месяц рождения</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc38" name="ZX9tvR">
+																<label for="fc38">Год рождения</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc39" name="ZX9tvR">
+																<label for="fc39">Контактный телефон</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc40" name="ZX9tvR">
+																<label for="fc40">Адрес электронной почты</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc41" name="ZX9tvR">
+																<label for="fc41">Место рождения</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc42" name="ZX9tvR">
+																<label for="fc42">Адрес места жительства</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc433" name="ZX9tvR">
+																<label for="fc433">Пол</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc43" name="ZX9tvR">
+																<label for="fc43">Серия номер документов, удостоверяющих личность</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc44" name="ZX9tvR">
+																<label for="fc44">Логин и пароль, которые используются для доступа к Интернет-ресурсам Компании</label>
+															</div>
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc45" name="ZX9tvR">
+																<label for="fc45">Идентификатор пользователя, хранимый в cookie</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc451" name="ZX9tvR">
+																<label for="fc451">Состояние здоровья</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc452" name="ZX9tvR">
+																<label for="fc452">Национальная принадлежность</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc453" name="ZX9tvR">
+																<label for="fc453">Расовая принадлежность</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc454" name="ZX9tvR">
+																<label for="fc454">Политические взгляды</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc455" name="ZX9tvR">
+																<label for="fc455">Философские убеждения</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc456" name="ZX9tvR">
+																<label for="fc456">Состояние интимной жизни</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc457" name="ZX9tvR">
+																<label for="fc457">Цветное цифровое фотографическое изображение лица владельца заграничного паспорта, содержащееся на электронном носителем информации данного документа</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc458" name="ZX9tvR">
+																<label for="fc458">Аудиозапись телефонного разговора</label>
+															</div>
+
+															<div class="form-checkbox-item">
+																<input type="checkbox" id="fc459" name="ZX9tvR">
+																<label for="fc459">Иные</label><br><br>
+															</div>
+															<div class="form-found-item">
+																<input type="text" class="form-input" id="another_goal_personal_data_text">
+															</div>
+
+														</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-form-s hidden-xs">
+							<div class="form-data">
+								<div class="form-data-header">
+									Ваши данные:<i class="fa fa-long-arrow-alt-down"></i>
+								</div>
+								<div class="form-data-body">
+									<div class="form-data-list">
+										<div class="form-data-item">
+											<div class="form-data-item-in">
+												<div>Тип сайта:</div>
+												<div>Информационный сайт</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-8 col-xs-12">
+						<div class="section-form-bottom"><a href="#" class="back">Назад</a><a href="#" class="bttn">Далее</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax-s parallax-1"><img src="img/parallax-1.svg" alt="img"></div>
+			<div class="parallax-s parallax-2"><img src="img/parallax-2.svg" alt="img"></div>
+			<div class="parallax-s parallax-3"><img src="img/parallax-1.svg" alt="img"></div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-in">
+				<div class="footer-logo">
+					<a href="#"><img src="img/logo-footer.svg" alt="logo"></a>
+				</div>
+				<div class="footer-menu">
+					<ul>
+						<li>
+							<a href="#">Микросервисы</a>
+						</li>
+						<li>
+							<a href="#">Цены</a>
+						</li>
+						<li>
+							<a href="#">Блог</a>
+						</li>
+						<li>
+							<a href="#">О нас</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-block">
+					<div class="contacts-list">
+						<div class="contacts-item">
+							<div class="contacts-title">Телефон</div>
+							<div class="contacts-cont"><a href="tel:74959244333">+7 (495) 924-43-33</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Электронная почта</div>
+							<div class="contacts-cont"><a href="mailto:hello@legal-box.ru ">hello@legal-box.ru</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Telegram</div>
+							<div class="contacts-cont"><a href="https://t.me/Legal_Box">t.me/Legal_Box </a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Адрес</div>
+							<div class="contacts-cont">Москва, ул. Большая Дмитровка 9с7</div>
+						</div>
+					</div>
+					<div class="footer-block-in">
+						<div class="work-time">
+							Мы работаем каждый день
+							<b>с 10:00 до 20:00</b>
+						</div>
+						<div class="socials">
+							<a href="#"><img src="img/telegram.png" alt="telegram"></a>
+							<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="parallax-s parallax-11"><img src="img/parallax-2.svg" alt="img"></div>
+	</footer>
+
+
+	<!-- scripts -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollbar.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- scripts end -->
+
+</body>
+</html>

@@ -1,0 +1,106 @@
+<div class="question-in-slider">
+	<div class="form-found">
+
+		<div class="form-found-list">
+			<p class="text-title">Может ли пользователь сайта зарегистрировать личный кабинет?</p>
+			<div class="help-tip">
+				<p>Укажите, имеется ли дополнительная возможность для юридических лиц или индивидуальных предпринимателей зарегистрироваться в личном кабинете на Вашем сайте  </p>
+			</div>
+
+			<div class="form-checkbox-list">
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc99659738" name="fqTjDM">
+					<label for="fc99659738">Да</label>
+
+					<script>
+                        $(document).ready(function() {
+
+                            $('input:radio[name=fqTjDM]').change(function () {
+
+                                if ($('#fc99659738').is(':checked')) {
+                                    $('#register-account').removeClass('form-hidden');
+                                    $('#register-account').parent().removeClass('form-hidden');
+
+                                } else {
+                                    $('#register-account').addClass('form-hidden');
+                                    $('#register-account').parent().addClass('form-hidden');
+                                }
+
+                                if (($(this).next().html())=='Нет') $('#fc33003975').next().fadeOut(); else $('#fc33003975').next().fadeIn();
+                                if (($(this).next().html())=='Да') $('#fc33003975').prop("checked", true);
+
+//																		 alert();
+                            });
+                        });
+
+					</script>
+
+
+				</div>
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc38192747" name="fqTjDM">
+					<label for="fc38192747">Нет</label>
+				</div>
+			</div>
+
+
+
+
+
+		</div>
+
+	</div>
+	<div class="form-found form-hidden">
+		<div id="register-account" class = "form-hidden form-checkbox-list">
+			<p class="text-title">Может ли пользователь зарегистрировать личный кабинет юридического лица/индивидуального предпринимателя?</p>
+			<div class="help-tip">
+				<p>Укажите, имеется ли дополнительная возможность для юридических лиц или индивидуальных предпринимателей заргеитсрироваться в личном кабинете на Вашем сайте</p>
+			</div>
+			<div class="form-checkbox-list">
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc49417942" name="Sw7E9V">
+					<label for="fc49417942">Да</label>
+
+				</div>
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc59062660" name="Sw7E9V">
+					<label for="fc59062660">Нет</label>
+				</div>
+			</div>
+
+		</div>
+	</div>
+	<div class="form-found">
+		<div class="form-checkbox-list">
+			<p  class="text-title">С какого момента настоящий документ становится обязательным для пользователя?</p>
+			<div class="help-tip">
+				<p>Укажите момент, с которого пользователь обязуется соблюдать условия использоваения Вашего сайта</p>
+			</div>
+			<div class="form-checkbox-list">
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc33003975" name="zYBTRP">
+					<label for="fc33003975"> С момента подтверждения регистрации личного кабинета пользователя</label>
+
+				</div>
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc62320317" name="zYBTRP">
+					<label for="fc62320317">С момента начала фактического использования сайта</label>
+				</div>
+				<div class="form-checkbox-item">
+					<input type="radio" id="fc79029988" name="zYBTRP">
+					<label for="fc79029988">С момента проставления отметки (галочки) о согласии с данным документом</label>
+				</div>
+			</div>
+
+		</div>
+	</div>
+</div>
+<script>
+    $('.form-checkbox-list-main input').on('change', function () {
+        if($('#fc0000014').is(':checked')){
+            $('.form-first').removeClass('class = "form-hidden"');
+        }else if($('#fc0000015').is(':checked')) {
+            $('.form-first').addClass('class = "form-hidden"');
+        }
+    });
+</script>

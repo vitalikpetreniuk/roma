@@ -1,0 +1,54 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных клиентов (физических лиц) за рубеж</p>
+	<div class="form-checkbox-list" id="fclm0013">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111343" name="name38" checked>
+			<label for="fc11111343">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111344" name="name38">
+			<label for="fc11111344">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Укажите страну(ы)</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111345">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add10" class="add-form bttn">Добавить страну</a>
+
+<script>
+    $('#fclm0013 input').on('change', function () {
+        if($('#fc11111343').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
+        }
+    });
+    var new_id = 1;
+    $('#add10').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found.form-first').append('<div class="form-found form-first  editional-input">' +
+            '<p>Укажите страну</p>' +
+            '<div class="form-checkbox-list">' +
+            '<div class="form-checkbox-item">' +
+            '<input type="text"  class="form-input" id="ra2911111' + new_id + '"  name = "ra2911111 '+ new_id+'">' +
+            '</div>' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>

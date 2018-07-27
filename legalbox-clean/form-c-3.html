@@ -1,0 +1,79 @@
+<div class="form-found">
+
+	<p class="text-title">Укажите тип сайта:</p>
+
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc95996142" name="63sVOP">
+			<label for="fc95996142">Информационный сайт</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc22509846" name="63sVOP">
+			<label for="fc22509846">Сайт-визитка</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc18238239" name="63sVOP">
+			<label for="fc18238239">Интернет-магазин</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc13492827" name="63sVOP">
+			<label for="fc13492827">Онлайн-сервис</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc80302739" name="63sVOP">
+			<label for="fc80302739">Агрегатор</label>
+			<script>
+                $(document).ready(function(){
+
+                    $('input:radio[name=63sVOP]').change(function() {
+                        //if it's Агрегатор
+                        if (this.id=='fc80302739') $('#agregator-site').fadeIn(); else $('#agregator-site').fadeOut();
+                        //if it's Интернет-магазин
+
+                        if (this.id=='fc18238239') $('#online-store-customer').fadeIn(); else $('#online-store-customer').fadeOut();
+
+                    });
+                });
+			</script>
+
+		</div>
+
+
+
+	</div>
+
+	<div id="agregator-site form-hidden">
+
+		<p class="text-title">На сайте-агрегаторе объединены предложения о:</p>
+		<div class="form-checkbox-list">
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fc14201433" name="M0CUlK">
+				<label for="fc14201433">Продаже товаров</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fc41416543" name="M0CUlK">
+				<label for="fc41416543">Оказании услуг</label>
+			</div>
+		</div>
+
+	</div>
+
+	<div id="online-store-customer form-hidden">
+
+		<p class="text-title">Покупателем товаров в интернет-магазине является:</p>
+		<div class="help-tip">
+			<p>Выберите с кем интернет-магазин заключает договор купли-продажи товара</p>
+		</div>
+		<div class="form-checkbox-list">
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fc81925214" name="PrMCpB">
+				<label for="fc81925214">Физическое лицо</label>
+			</div>
+			<div class="form-checkbox-item">
+				<input type="checkbox" id="fc36135430" name="PrMCpB">
+				<label for="fc36135430">Юридическое лицо или индивидуальный предприниматель</label>
+			</div>
+		</div>
+
+	</div>
+</div>

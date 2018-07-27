@@ -1,0 +1,75 @@
+<div class="form-found">
+	<p class="text-title">Какие средства обеспечения безопасности персональных данных используются у вас</p>
+	<div class="form-found-item">
+		<span>Средства защиты информации от несанкционированного доступа:</span>
+		<input class="form-input" type="text" id="fd08111424">
+	</div>
+	<div class="form-found-item">
+		<span>Средства регистрации и учёта событий:</span>
+		<input class="form-input" type="text" id="fd08111425">
+	</div>
+	<div class="form-found-item">
+		<span>Средства антивирусной защиты:</span>
+		<input class="form-input" type="text" id="fd08111426">
+	</div>
+	<div class="form-found-item">
+		<span>Средства резервного копирования и восстановления информации:</span>
+		<input class="form-input" type="text" id="fd08111427">
+	</div>
+	<div class="form-found-item">
+		<span>Межсетевые экраны и криптографические шлюзы:</span>
+		<input class="form-input" type="text" id="fd08111428">
+	</div>
+	<div class="form-found-item">
+		<span>Средства криптографической защиты информации:</span>
+		<input class="form-input" type="text" id="fd08111429">
+	</div>
+	<div class="form-found-item">
+		<span>Средства обнаружения и предотвращения вторжений:</span>
+		<input class="form-input" type="text" id="fd08111430">
+	</div>
+	<div class="form-found-item">
+		<span>Средства анализа защищённости:</span>
+		<input class="form-input" type="text" id="fd08111431">
+	</div>
+	<div class="form-copy" id="fd08lm0001">
+		<div class="form-found-item" >
+			<span>Иные средства:</span>
+			<input class="form-input" type="text" id="fd08111432">
+		</div>
+	</div>
+	<a href="#" id = "fd08add1" class="add-form bttn">Добавить средства</a>
+</div>
+<script>
+    $('#fd08lm0001 input').on('change', function () {
+        if($('#fd08111432').is(':checked')){
+            $('#fd08add1').removeClass('form-hidden');
+        }else{
+            $('#fd08add1').addClass('form-hidden');
+            $('#fd08lm0001').find('.editional-input').remove();
+        }
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().remove();
+        if($('#fd08lm0001 .dok_list').length < 9){
+            $('#fd08add1').removeClass('form-hidden');
+        }
+    });
+    var new_id = 0;
+    $('#fd08add1').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        console.log('***');
+        if($('#fd08lm0001 .dok_list').length < 9){
+            $(this).siblings('.form-copy').append(
+                '<div class="editional-input dok_list">'+
+                '<input class="form-input form-place" type="text" id="fd08a110'+ new_id + '">'+
+                '<button class="del-item"></button>' +
+                '</div>');
+        }
+        if($('#fd08lm0001 .dok_list').length === 9){
+            $(this).addClass('form-hidden');
+        }
+    });
+</script>

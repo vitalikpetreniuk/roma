@@ -1,0 +1,71 @@
+<div class="form-found">
+	<p class="text-title">Цели получения персональных данных пользователей:	</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc41829479" name="4PRZ0D">
+			<label for="fc41829479">Заключение и исполнение договоров</label>
+		</div>
+		<!-- zakl_isp_dog -->
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc36435752" name="4PRZ0D">
+			<label for="fc36435752">Информирование о новых товарах, услугах</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc07414744" name="4PRZ0D">
+			<label for="fc07414744">Подготовка индивидуальных предложений</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc00263589" name="4PRZ0D">
+			<label for="fc00263589">Ведения рекламной деятельности</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc64539070" name="4PRZ0D">
+			<label for="fc64539070">Предоставление пользователям доступа к специальной информациии</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc64650014" name="4PRZ0D">
+			<label for="fc64650014">Обработка заявок на сайте</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fc54282880" name="4PRZ0D">
+			<label for="fc54282880">Публикация на сайте, информации о клиентах, работниках</label>
+		</div>
+		<div class="form-checkbox-item form-double" id="fc150001">
+			<input type="checkbox" id="fc02070153" name="4PRZ0D">
+			<label for="fc02070153">Иная цель <input type="text" class="form-input" id="another_goal_personal_data_text" name="4PRZ0D"> </label>
+		</div>
+		<a href="#" id = "fcadd15" class="add-form bttn form-hidden">Добавить цель</a>
+		<script>
+            $('#fc150001 input').on('change', function () {
+                if($('#fc02070153').is(':checked')){
+                    $(this).parents('.form-double').siblings('.add-form.bttn').removeClass('form-hidden');
+                }else {
+                    $(this).parents('.form-double').siblings('.add-form.bttn').addClass('form-hidden');
+                    $(this).siblings('.goal-input').remove();
+                }
+            });
+            $('body').on('click','.goal-input .del-item', function (e) {
+                e.preventDefault();
+                $(this).parent().remove();
+                if($('#fc150001 .goal-input').length < 9){
+                    $('#fcadd15').removeClass('form-hidden');
+                }
+            });
+            var new_id = 0;
+            $('#fcadd15').on('click', function (e){
+                e.preventDefault();
+                new_id += 1;
+                if($('#fc150001 .goal-input').length < 9){
+                    $(this).siblings('.form-double').append(
+                        '<div class="form-found editional-input goal-input">' +
+                        '<input id="fc151110' + new_id + '" class="form-input" type="text"  name = "4PRZ0D">' +
+                        '<button class="del-item"></button>'+
+                        '</div>');
+                }
+                if($('#fc150001 .goal-input').length === 9){
+                    $(this).addClass('form-hidden');
+                }
+            });
+		</script>
+	</div>
+</div>

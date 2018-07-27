@@ -1,0 +1,87 @@
+<div class="form-found">
+	<p class="text-title">Укажите тип сайта</p>
+	<div class="form-checkbox-list" id="fclm0022">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111451" name="name56" checked>
+			<label for="fc11111451">Информационный сайт</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111452" name="name56">
+			<label for="fc11111452">Сайт-визитка</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111453" name="name56">
+			<label for="fc11111453">Интернет-магазин</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111454" name="name56">
+			<label for="fc11111454">Онлайн-сервис</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111455" name="name56">
+			<label for="fc11111455">Агрегатор</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Обладателем прав на сайт и размещенный на сайте контент является:</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item form-double">
+			<input type="checkbox" id="fc11111456" name="name57" checked>
+			<label for="fc11111456">ООО «</label>
+			<input type="text" id="fc11111457" class="form-input">
+			<label for="fc11111456" class="last">» / ИП</label>
+			<input type="text" id="fc11111458" class="form-input">
+		</div>
+		<div class="form-checkbox-item form-double">
+			<input type="checkbox" id="fc11111459" name="name57">
+			<label for="fc11111459">ООО «</label>
+			<input type="text" id="fc11111460" class="form-input">
+			<label for="fc11111459" class="last">» / ИП</label>
+			<input type="text" id="fc11111461" class="form-input">
+		</div>
+	</div>
+</div>
+<div class="form-found form-second form-hidden">
+	<p class="text-title">На сайте-агрегаторе объединены предложения о:</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111462" name="name58" checked>
+			<label for="fc11111462">Продаже товаров</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111463" name="name58">
+			<label for="fc11111463">Оказании услуг</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-second form-hidden">
+	<p class="text-title">Оформление и оплата заказа осуществляется:</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111464" name="name59" checked>
+			<label for="fc11111464">На вашем сайте</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111465" name="name59">
+			<label for="fc11111465">На сайте третьего лица (информация о товаре которого содержится на вашем сайте)</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111466" name="name59">
+			<label for="fc11111466">Оба варианта</label>
+		</div>
+	</div>
+</div>
+
+<script>
+
+    $('#fclm0022 input').on('change', function () {
+        if($('#fc11111455').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+        }
+    });
+</script>

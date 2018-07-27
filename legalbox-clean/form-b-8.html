@@ -1,0 +1,52 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных работников за рубеж</p>
+	<div class="form-checkbox-list" id="fclm0029">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111149" name="name7" >
+			<label for="fc11111149">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111150" name="name7">
+			<label for="fc11111150">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Укажите страну(ы)</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111151">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add15" class="add-form bttn">Добавить страну</a>
+
+<script>
+    $('#fclm0029 input').on('change', function () {
+        if($('#fc11111149').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form').addClass('form-hidden');
+        }
+    });
+    var new_id = 1;
+    $('#add15').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found.form-first').append('<div class="form-found form-first  editional-input">' +
+            '<p>Укажите страну</p>' +
+            '<div class="form-checkbox-list">' +
+            '<div class="form-checkbox-item">' +
+            '<input type="text" class="form-input" id="ra0811111' + new_id + '" name = "ra0811111'+ new_id+'">' +
+            '</div>' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>

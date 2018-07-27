@@ -1,0 +1,116 @@
+<div class="form-found">
+	<p class="text-title">Содержатся ли компьютерных программах компании персональные данные сотрудников (гпх)</p>
+	<div class="form-checkbox-list" id="fclm0007">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111224" name="name20" checked>
+			<label for="fc11111224">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111225" name="name20">
+			<label for="fc11111225">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Название программы(ам) с указанием версии</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" id="fc11111226" class="form-input">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add5" class="add-form bttn">Добавить программу</a>
+<div class="form-found form-first">
+	<p class="text-title">Передаются ли данные сотрудников (гпх) по внутренней (локальной) сети компании</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111227" name="name21" checked>
+			<label for="fc11111227">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111228" name="name21">
+			<label for="fc11111228">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Передаются ли данные сотрудников (гпх) по сети Интернет</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111229" name="name22" checked>
+			<label for="fc11111229">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111230" name="name22">
+			<label for="fc11111230">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Персональные данные сотрудников (гпх) хранятся</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111231" name="name23" checked>
+			<label for="fc11111231">В собственном сервере</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111232" name="name23">
+			<label for="fc11111232">В арендованном сервере</label>
+		</div>
+	</div>
+</div>
+<div class="form-first">
+	<div class="form-found form-second">
+		<p class="text-title">Укажите адрес местонахождения собственного сервера</p>
+		<div class="form-checkbox-list">
+			<div class="form-checkbox-item">
+				<input type="text" class="form-input" id="fc11111233">
+			</div>
+		</div>
+	</div>
+	<div class="form-found form-hidden form-third">
+		<p class="text-title">Укажите ИНН компании, предоставляющей сервер вашей компании</p>
+		<div class="form-inn">
+			<input id="fc11111234" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
+		</div>
+	</div>
+</div>
+
+<script>
+    $('#fclm0007 input').on('change', function () {
+        if($('#fc11111224').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
+        }
+    });
+    $('.form-first input').on('change', function () {
+        if($('#fc11111231').is(':checked')){
+            $$(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-third').addClass('form-hidden');
+        }else if($('#fc11111232').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-third').removeClass('form-hidden');
+        }
+    });
+    var new_id = 1;
+    $('#add5').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found:nth-child(2)').append(
+            '<div class="form-found form-first editional-input">' +
+            '<p>Название и версия программы</p>' +
+            '<div>' +
+            '<input id="pm171111' + new_id + '" class="form-input" type="text" name = "pm171111' + new_id + '">' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>

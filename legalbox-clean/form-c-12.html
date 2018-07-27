@@ -1,0 +1,44 @@
+
+<div class="form-found">
+	<p class="text-title">Имеется ли возможность у пользователя дать предварительное согласие на получение рекламной (информационной) рассылки?</p>
+	<div class="help-tip">
+		<p>Осуществление рекламной рассылки возможно только при условии предварительного согласия пользователя на ее получение. Рассылка признается осуществленной без согласия, если отправитель не сможет доказать, что такое соглаие было получено</p>
+	</div>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc53295639" name="oU0Eio">
+			<label for="fc53295639">Да</label>
+
+			<script>
+                $(document).ready(function() {
+                    $('input:radio[name=oU0Eio]').change(function () {
+                        $('#confirmation-question').toggle('display');
+                    });
+                });
+			</script>
+
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc28288557" name="oU0Eio">
+			<label for="fc28288557">Нет</label>
+		</div>
+	</div>
+	<div class="form-found form-first" id="confirmation-question" style="display:none">
+		<p  class="text-title">Осуществляется ли подтверждение данного пользователем согласия</p>
+		<div class="help-tip">
+			<p>Подтверждение согласия - рекомендуемый шаг, который позволяет доказать получение согласия от пользователя в случае претензии от него. Подтверждение может осуществляться различными способами. Например, путем ввода пользователем смс-кода, направленного на указанный им номер телефона либо путем перехода по ссылке, направленной на адрес электронной почты пользователя и др.</p>
+		</div>
+		<div class="form-checkbox-list">
+			<div class="form-checkbox-item">
+				<input type="radio" id="fc10804455" name="pKutrT">
+				<label for="fc10804455">Да</label>
+
+			</div>
+			<div class="form-checkbox-item">
+				<input type="radio" id="fc15319120" name="pKutrT">
+				<label for="fc15319120">Нет</label>
+			</div>
+		</div>
+
+	</div>
+</div>

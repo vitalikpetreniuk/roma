@@ -1,0 +1,70 @@
+<div class="form-found">
+	<p class="text-title">Имеются ли официальные документы компании, в которых содержатся персональные данные соискателей</p>
+	<div class="form-checkbox-list" id="fclm0010">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111283" name="name29" checked>
+			<label for="fc11111283">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111284" name="name29">
+			<label for="fc11111284">Нет</label>
+		</div>
+	</div>
+</div>
+<div id="form100007" class="form-found-list form-first">
+	<p class="text-title">Перечислите такие документы и место их хранения</p>
+	<div class="form-copy">
+		<div class="form-found-item">
+			<span>Документ:</span>
+			<input class="form-input form-document" type="text" id="fc11111285">
+		</div>
+		<div class="form-found-item">
+			<span>Место хранения (кабинет№):</span>
+			<input class="form-input form-place" type="text" id="fc11111286">
+		</div>
+	</div>
+</div>
+
+<script>
+    $('#fclm0010 input').on('change', function () {
+        if($('#fc11111283').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+        }
+    });
+
+    var number;
+    var random_id;
+    var form_clone;
+    var input = 1;
+
+    var forms7 = $('#form100007');
+    $('body').on('input','#form100007 .form-copy input', function () {
+        var document = $(this).parents('.form-copy').find('.form-document').val();
+        var place = $(this).parents('.form-copy').find('.form-place').val();
+        var parent = $(this).parents('.form-copy');
+        if(
+            (document.length >= 1 || place.length >= 1) &&
+            parent.next().length == 0
+        ){
+            console.log('full');
+
+            number = Math.random();
+            random_id = number.toString(36).substr(2, 9);
+
+            form_clone = forms7.find('.form-copy:last-child').clone();
+            form_clone.find('.form-input.form-document').attr('id', 'doc_'+random_id);
+            form_clone.find('.form-input.form-place').attr('id', 'pl_'+random_id);
+            form_clone.insertAfter('#form100007 .form-copy:last-child');
+            forms7.find('.form-copy:last-child input').val('');
+        }else if(document.length == 0 && place.length == 0){
+            console.log('empty');
+            var length = forms7.find('.form-copy').length;
+            if(length > 1){
+                forms7.find('.form-copy:last-child').remove();
+            }
+            input = 1;
+        }
+    });
+</script>

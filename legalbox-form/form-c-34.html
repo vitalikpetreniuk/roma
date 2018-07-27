@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>form-c-34</title>
+
+	<!--styles-->
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/jquery.scrollbar.css">
+	<link rel="stylesheet" href="css/forms.css">
+	<link rel="stylesheet" href="css/forms-media.css">
+	<!--styles end-->
+
+	<!--jQuery library-->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<!--jQuery library end -->
+
+	<script defer src="https://use.fontawesome.com/releases/v5.0.8/js/all.js" integrity="sha384-SlE991lGASHoBfWbelyBPLsUlwY1GwNDJo3jSJO04KZ33K2bwfV9YBauFfnzvynJ" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+    <div class="menu-block">
+        <div class="container">
+            <div class="menu-block-header">
+                <div class="menu-block-logo"><a href="#"><img src="img/logo-footer.svg" alt="logo"></a></div>
+                <div class="menu-block-close">
+                    <button type="button"><i class="fas fa-times"></i></button>
+                </div>
+            </div>
+            <div class="menu-block-body">
+                <ul>
+                    <li>
+                        <a href="#">Микросервисы</a>
+                    </li>
+                    <li>
+                        <a href="#">Цены</a>
+                    </li>
+                    <li>
+                        <a href="#">Блог</a>
+                    </li>
+                    <li>
+                        <a href="#">О нас</a>
+                    </li>
+                    <li>
+                        <a href="#">Контакты</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="menu-block-footer">
+                <div class="text-center">
+                    <div class="login-button"><a href="#" class="bttn bttn-secondary">Вход / Регистрация</a></div>
+                </div>
+                <div class="socials">
+                    <a href="#"><img src="img/telegram.png" alt="telegram"></a>
+                    <a href="#"><img src="img/facebook.png" alt="facebook"></a>
+                </div>
+            </div>
+        </div>
+    </div>
+	<header>
+		<div class="container">
+			<div class="header-in">
+				<div class="logo-top">
+					<a href="#"><img src="img/logo-top.svg" alt="logo"></a>
+				</div>
+				<div class="menu-toggle">
+					<button type="button"><span></span></button>
+				</div>
+				<div class="header-block">
+					<div class="top-menu">
+						<ul>
+							<li>
+								<a href="#">Микросервисы</a>
+							</li>
+							<li>
+								<a href="#">Цены</a>
+							</li>
+							<li>
+								<a href="#">Блог</a>
+							</li>
+							<li>
+								<a href="#">О нас</a>
+							</li>
+							<li>
+								<a href="#">Контакты</a>
+							</li>
+						</ul>
+					</div>
+					<div class="login-button">
+						<a href="#" class="bttn bttn-secondary">Вход / Регистрация</a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="body-block">
+		<section class="section-form">
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-offset-2 col-lg-8 col-xs-12">
+						<h1>Пользовательское соглашение</h1>
+						<p class="section-form-top-text">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.</p>
+					</div>
+				</div>
+			</div>
+			<div class="section-form-mid">
+				<div class="container">
+					<div class="row row-flex">
+						<div class="col-md-8 col-form-b">
+							<div class="form-step form-step-offset">
+								<div class="form-step-nav">
+									<span>01</span><span>9</span>
+								</div>
+								<div class="form-step-cont">
+									<form>
+										<div class="sliding-questions">
+											<div class="question-in-slider">
+												<div class="form-found">
+													<p class="text-title">Укажите Ваш ИНН</p>
+													<div class="help-tip">
+														<p>Укажите ИНН Вашей организации либо Ваш собственный ИНН (если Вы являетесь индивидуальным предпринимателем). Узнать ИНН можно на сайте https://egrul.nalog.ru/</p>
+													</div>
+
+													<div class="form-inn">
+														<input id="inn" class="form-input form-input-big input-inn" type="text" placeholder="132808730606">
+													</div>
+													<br>
+													<!-- sample for Entrepreneur - 132808730606 , for legal-person  - 5262321353 -->
+
+													<div class="form-found form-hidden" id="legal-person-c34">
+														<div class="form-found-list">
+															<div class="form-found-item">
+																<span>Наименование</span>
+																<input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>ОГРН</span>
+																<input class="form-input" id="ogrn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>КПП</span>
+																<input class="form-input" id="kpp" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>Место нахождения</span>
+																<input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>Фактический адрес местонахождения совпадает с юридическим?</span>
+																<div class="help-tip">
+																	<p>Если адрес фактического местонахождения Вашей компании отличается от адреса, указанного при ее государственной регистрации в налоговом органе, укажите это.</p>
+																</div>
+																<div class="form-checkbox-list">
+																	<div class="form-checkbox-item">
+																		<input type="radio" id="fc3" name="c34flqT7gE" >
+																		<label for="fc3">Да</label>
+
+																	</div>
+																	<div class="form-checkbox-item">
+																		<input type="radio" id="fc4" name="c34flqT7gE">
+																		<label for="fc4">Нет</label>
+																		<script>
+
+                                                                            $('input:radio[name=c34flqT7gE]').on('change', function () {
+                                                                                if($('#fc3').is(':checked')){
+                                                                                    $('#actual-address-form-c34').addClass('form-hidden');
+                                                                                }else if($('#fc4').is(':checked')){
+                                                                                    $('#actual-address-form-c34').removeClass('form-hidden');
+                                                                                }
+                                                                            });
+																		</script>
+																	</div>
+																</div>
+															</div>
+															<div class="form-found-item form-hidden" id="actual-address-form-c34" >
+																<span>Укажите фактический адрес местонахождения</span>
+																<input class="form-input" id="adressfact-c34" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+
+														</div>
+													</div>
+
+													<div class="form-found form-hidden" id="entrepreneur-c34" >
+														<div class="form-found-list">
+															<div class="form-found-item">
+																<span>ФИО</span>
+																<input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+															<div class="form-found-item">
+																<span>ОГРНИП</span>
+																<input class="form-input" type="text" id="ogrnip" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+															</div>
+
+														</div>
+
+													</div>
+													<script>
+                                                        $(document).ready(function() {
+
+                                                            $('#inn').on('input', function() {
+                                                                var value = $(this).val().trim();
+                                                                $(this).val(value);
+                                                                var settings = {
+                                                                    "async": true,
+                                                                    "crossDomain": true,
+                                                                    "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
+                                                                    "method": "GET",
+                                                                    "headers": {
+                                                                        "content-type": "application/json",
+                                                                        "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
+                                                                        "accept": "application/json",
+                                                                        "cache-control": "no-cache",
+                                                                        "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
+                                                                    },
+                                                                    "processData": false,
+                                                                    "data": "{ \"query\": \"7719402047\" }"
+                                                                };
+                                                                if (this.value.length == 10) {
+                                                                    $.ajax(settings).done(function(response) {
+                                                                        if (response["suggestions"].length == 0) {
+                                                                            $('#company_name').val("");
+                                                                            $('#ogrn').val("");
+                                                                            $('#kpp').val("");
+                                                                            $('#adress').val("");
+                                                                            $(".pop-up__validity--inn").addClass('active');
+                                                                            return;
+                                                                        }
+                                                                        var responseJson = response["suggestions"][0];
+                                                                        $('#company_name').val(responseJson["value"]);
+                                                                        $('#ogrn').val(responseJson["data"]["ogrn"]);
+                                                                        $('#kpp').val(responseJson["data"]["kpp"]);
+                                                                        $('#adress').val(responseJson["data"]["address"]["value"]);
+
+                                                                        console.log(JSON.stringify(response));
+                                                                    });
+                                                                    $('#legal-person-c34').removeClass('form-hidden');
+                                                                } else {
+                                                                    $('#legal-person-c34').addClass('form-hidden');
+                                                                }
+                                                                if (this.value.length == 12) {
+
+                                                                    //same thing: open form, autofill it for entrepreneur
+
+                                                                    $.ajax(settings).done(function(response) {
+                                                                        if (response["suggestions"].length == 0) {
+                                                                            $('#fio').val("");
+                                                                            $('#ogrnip').val("");
+                                                                            $(".pop-up__validity--inn").addClass('active');
+                                                                            return;
+                                                                        }
+
+                                                                        var responseJson = response["suggestions"][0];
+                                                                        $('#fio').val(responseJson["value"]);
+                                                                        $('#ogrnip').val(responseJson["data"]["ogrn"]);
+
+                                                                    });
+                                                                    $('#entrepreneur-c34').removeClass('form-hidden');
+                                                                } else {
+                                                                    $('#entrepreneur-c34').addClass('form-hidden');
+                                                                }
+
+                                                            });
+                                                        });
+													</script>
+												</div>
+											</div>
+										</div>
+									</form>
+								</div>
+							</div>
+						</div>
+						<div class="col-md-4 col-form-s hidden-xs">
+							<div class="form-data">
+								<div class="form-data-header">
+									Ваши данные:<i class="fa fa-long-arrow-alt-down"></i>
+								</div>
+								<div class="form-data-body">
+									<div class="form-data-list">
+										<div class="form-data-item">
+											<div class="form-data-item-in">
+												<div>Тип сайта:</div>
+												<div>Информационный сайт</div>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="container">
+				<div class="row">
+					<div class="col-lg-9 col-md-8 col-xs-12">
+						<div class="section-form-bottom"><a href="#" class="back">Назад</a><a href="#" class="bttn">Далее</a></div>
+					</div>
+				</div>
+			</div>
+			<div class="parallax-s parallax-1"><img src="img/parallax-1.svg" alt="img"></div>
+			<div class="parallax-s parallax-2"><img src="img/parallax-2.svg" alt="img"></div>
+			<div class="parallax-s parallax-3"><img src="img/parallax-1.svg" alt="img"></div>
+		</section>
+	</div>
+	<footer>
+		<div class="container">
+			<div class="footer-in">
+				<div class="footer-logo">
+					<a href="#"><img src="img/logo-footer.svg" alt="logo"></a>
+				</div>
+				<div class="footer-menu">
+					<ul>
+						<li>
+							<a href="#">Микросервисы</a>
+						</li>
+						<li>
+							<a href="#">Цены</a>
+						</li>
+						<li>
+							<a href="#">Блог</a>
+						</li>
+						<li>
+							<a href="#">О нас</a>
+						</li>
+						<li>
+							<a href="#">Контакты</a>
+						</li>
+					</ul>
+				</div>
+				<div class="footer-block">
+					<div class="contacts-list">
+						<div class="contacts-item">
+							<div class="contacts-title">Телефон</div>
+							<div class="contacts-cont"><a href="tel:74959244333">+7 (495) 924-43-33</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Электронная почта</div>
+							<div class="contacts-cont"><a href="mailto:hello@legal-box.ru ">hello@legal-box.ru</a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Telegram</div>
+							<div class="contacts-cont"><a href="https://t.me/Legal_Box">t.me/Legal_Box </a></div>
+						</div>
+						<div class="contacts-item">
+							<div class="contacts-title">Адрес</div>
+							<div class="contacts-cont">Москва, ул. Большая Дмитровка 9с7</div>
+						</div>
+					</div>
+					<div class="footer-block-in">
+						<div class="work-time">
+							Мы работаем каждый день
+							<b>с 10:00 до 20:00</b>
+						</div>
+						<div class="socials">
+							<a href="#"><img src="img/telegram.png" alt="telegram"></a>
+							<a href="#"><img src="img/facebook.png" alt="facebook"></a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="parallax-s parallax-11"><img src="img/parallax-2.svg" alt="img"></div>
+	</footer>
+	<section class="pop-up__validity pop-up__validity--inn">
+		<div class="pop-up__inner">
+			<span class="parallax-7">
+				<img src="img/parallax-2.svg" alt="img">
+			</span>
+			<button class="pop-up__close"></button>
+			<p class="pop-up__all">Неправильный ИНН</p>
+			<p class="pop-up__all">ИНН организации должен иметь вид 5262321353 (10 цифр) <br> ИНН физического лица - 132808730606 (12 цифр)</p>
+		</div>
+	</section>
+
+
+
+	<!-- scripts -->
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/jquery.scrollbar.min.js"></script>
+	<script src="js/common.js"></script>
+	<!-- scripts end -->
+
+</body>
+</html>

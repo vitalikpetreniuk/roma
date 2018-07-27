@@ -1,0 +1,35 @@
+<div class="form-found">
+    <p class="text-title">Предусмотрена ли техническая поддержка Программы для ЭВМ?</p>
+    <div class="form-checkbox-list">
+        <div class="form-checkbox-item">
+            <input type="radio" id="fc86759097" name="wKDhH0">
+            <label for="fc86759097">Да</label>
+        </div>
+        <div class="form-checkbox-item">
+            <input type="radio" id="fc07177446" name="wKDhH0">
+            <label for="fc07177446">Нет</label>
+            <script>
+                $('input:radio[name=wKDhH0]').change(function() {
+
+                    $('#tech-support').toggle('display');
+
+                });
+            </script>
+        </div>
+    </div>
+    <div class="form-found form-second form-hidden" id="tech-support">
+        <p class="text-title">Услуги по технической поддержке::</p>
+        <div class="form-checkbox-list">
+            <div class="form-checkbox-item">
+                <input id="fc95881723" name="FeBjrU" type="radio">
+                <label for="fc95881723">Оплачиваются отдельно</label>
+            </div>
+            <div class="form-checkbox-item">
+                <input id="fc86515462" name="FeBjrU" type="radio">
+                <label for="fc86515462">Включены в стоимость использования Программы для ЭВМ
+                </label>
+            </div>
+        </div>
+
+    </div>
+</div>

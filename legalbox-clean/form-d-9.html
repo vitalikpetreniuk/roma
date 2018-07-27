@@ -1,0 +1,71 @@
+<div class="form-found">
+	<p class="text-title">Назначить ответственным за обработку персональных данных</p>
+	<div class="form-checkbox-list" id="fd09lm0021">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fd0911111433" name="fd10name54">
+			<label for="fd0911111433">Руководителя</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fd0911111434" name="fd10name54">
+			<label for="fd0911111434">Другое лицо</label>
+		</div>
+	</div>
+</div>
+<div id="fd09lm001" class="form-found-list form-first form-hidden">
+	<div class="form-found-item form-hidden">
+		<span>Должность</span>
+		<input class="form-input" type="text" id="fd0911111435">
+	</div>
+	<div class="form-found-item">
+		<span>ФИО</span>
+		<input class="form-input" type="text" id="fd0911111436" value="Петров Петр Петрович">
+	</div>
+	<div class="form-found-item">
+		<span>Телефон</span>
+		<input class="form-input" type="tel" id="fd0911111437">
+	</div>
+	<div class="form-found-item">
+		<span>Почтовый адрес</span>
+		<input class="form-input" type="text" id="fd0911111438">
+	</div>
+	<div class="form-found-item">
+		<span>Адрес электронной почты</span>
+		<input class="form-input" type="email" id="fd0911111439">
+	</div>
+</div>
+<div id="fd09lm002" class="form-found-list form-second form-hidden">
+	<div class="form-found-item">
+		<span>Должность</span>
+		<input class="form-input" type="text" id="fd0911111446">
+	</div>
+	<div class="form-found-item">
+		<span>ФИО</span>
+		<input class="form-input" type="text" id="fd0911111447">
+	</div>
+	<div class="form-found-item">
+		<span>Телефон</span>
+		<input class="form-input" type="tel" id="fd0911111448">
+	</div>
+	<div class="form-found-item">
+		<span>Почтовый адрес</span>
+		<input class="form-input" type="text" id="fd0911111449">
+	</div>
+	<div class="form-found-item">
+		<span>Адрес электронной почты</span>
+		<input class="form-input" type="email" id="fd0911111450">
+	</div>
+</div>
+<script>
+    $('#fd09lm0021 input').on('change', function () {
+        if($('#fd0911111433').is(':checked')&&($('#fd01inn').val().length === 10)){
+            $('#fd09lm001').addClass('form-hidden');
+            $('#fd09lm002').removeClass('form-hidden');
+        }else if($('#fd0911111433').is(':checked')&&($('#fd01inn').val().length === 12)){
+            $('#fd09lm001').removeClass('form-hidden');
+            $('#fd09lm002').addClass('form-hidden');
+        }else if($('#fd0911111434').is(':checked')){
+            $('#fd09lm001').addClass('form-hidden');
+            $('#fd09lm002').removeClass('form-hidden');
+        }
+    });
+</script>

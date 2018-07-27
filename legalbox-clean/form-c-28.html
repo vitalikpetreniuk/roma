@@ -1,0 +1,119 @@
+<div class="form-found">
+	<p class="text-title">Производилась ли государственная регистрация Программы для ЭВМ?</p>
+	<div class="help-tip">
+		<p>Государственная регистрация осуществляется путем подачи заявки в Роспатент. Является рекомендуемым действием для подтверждения прав на программу для ЭВМ. </p>
+	</div>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc71736301" name="M1sBLL">
+			<label for="fc71736301">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc96376984" name="M1sBLL">
+			<label for="fc96376984">Нет</label>
+			<script>
+                $('input:radio[name=M1sBLL]').change(function() {
+
+                    //                                                                    $('#gos-reg').toggle('display');
+                    if ($('#fc71736301').is(':checked')) {
+                        $('#gos-reg').removeClass('form-hidden');
+                    }
+                    else{
+                        $('#gos-reg').addClass('form-hidden');
+                    }
+                });
+			</script>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first form-hidden" id="gos-reg">
+	<p class="text-title">Укажите номер и дату свидетельства:</p>
+	<div class="form-found-item">
+		<span>Свидетельство №</span>
+		<input class="form-input" type="text" pattern="\d+" id="gos_reg_number_evm" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+	</div>
+	<div class="form-found-item form-found-item-date form-found-item-date--d-m-y ">
+		<span>от:</span>
+		<div class="select-container">
+			<select class="form-input" type="text" id="gos_reg_day_evm" name = "gos_reg_day" >
+				<option>01</option>
+				<option>02</option>
+				<option>03</option>
+				<option>04</option>
+				<option>05</option>
+				<option>06</option>
+				<option>07</option>
+				<option>08</option>
+				<option>09</option>
+				<option>10</option>
+				<option>11</option>
+				<option>12</option>
+				<option>13</option>
+				<option>15</option>
+				<option>16</option>
+				<option>17</option>
+				<option>18</option>
+				<option>19</option>
+				<option>20</option>
+				<option>21</option>
+				<option>22</option>
+				<option>23</option>
+				<option>24</option>
+				<option>25</option>
+				<option>26</option>
+				<option>27</option>
+				<option>28</option>
+				<option>29</option>
+				<option>30</option>
+				<option>31</option>
+			</select>
+			<select class="form-input" type="text" id="gos_reg_month_evm" name = "gos_reg_month" >
+				<option>января</option>
+				<option>февраля</option>
+				<option>марта</option>
+				<option>апреля</option>
+				<option>мая</option>
+				<option>июня</option>
+				<option>июля</option>
+				<option>августа</option>
+				<option>сентября</option>
+				<option>октября</option>
+				<option>ноября</option>
+				<option>декабря</option>
+			</select>
+			<select class="form-input" type="text" id="gos_reg_year_evm" name = "gos_reg_year" >
+				<option>2018</option>
+				<option>2017</option>
+				<option>2016</option>
+				<option>2015</option>
+				<option>2014</option>
+				<option>2013</option>
+				<option>2012</option>
+				<option>2011</option>
+				<option>2010</option>
+				<option>2009</option>
+				<option>2008</option>
+				<option>2007</option>
+				<option>2006</option>
+				<option>2005</option>
+				<option>2004</option>
+				<option>2003</option>
+				<option>2002</option>
+				<option>2001</option>
+				<option>2000</option>
+				<option>1999</option>
+				<option>1998</option>
+				<option>1997</option>
+				<option>1996</option>
+				<option>1995</option>
+				<option>1994</option>
+				<option>1993</option>
+				<option>1992</option>
+				<option>1991</option>
+				<option>1990</option>
+			</select>
+
+		</div>
+	</div>
+
+</div>

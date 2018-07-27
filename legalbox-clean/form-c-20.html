@@ -1,0 +1,49 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных пользователя за рубеж:</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc47078475" name="GcIADu" >
+			<label for="fc47078475">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc02398130" name="GcIADu">
+			<label for="fc02398130">Нет</label>
+			<script>
+                $('input:radio[name=GcIADu]').change(function() {
+                    $('#ask-country').toggle('display');
+                    $('.add-form').toggleClass('form-hidden');
+                });
+			</script>
+		</div>
+	</div>
+</div>
+<div id = "ask-country" class="form-found form-first">
+	<p class="text-title">Укажите страну(ы)</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111228">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add16" class="add-form bttn">Добавить страну</a>
+<script>
+    var new_id = 1;
+    $('#add16').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found.form-first').append('<div class="form-found form-first  editional-input">' +
+            '<p>Укажите страну</p>' +
+            '<div class="form-checkbox-list">' +
+            '<div class="form-checkbox-item">' +
+            '<input type="text" class="form-input" id="rac201111' + new_id + '"  name = "rac201111'+ new_id+'">' +
+            '</div>' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>

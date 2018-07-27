@@ -1,0 +1,54 @@
+<div class="form-found">
+	<p class="text-title">Осуществляется ли передача персональных данных соискателей за рубеж</p>
+	<div class="form-checkbox-list" id="fclm0009">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111280" name="name28" checked>
+			<label for="fc11111280">Да</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111281" name="name28">
+			<label for="fc11111281">Нет</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title">Укажите страну(ы)</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111282">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add7" class="add-form bttn">Добавить страну</a>
+
+<script>
+    $('#fclm0009 input').on('change', function () {
+        if($('#fc11111280').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
+        }
+    });
+    var new_id = 1;
+    $('#add7').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found.form-first').append('<div class="form-found form-first  editional-input">' +
+            '<p>Укажите страну</p>' +
+            '<div class="form-checkbox-list">' +
+            '<div class="form-checkbox-item">' +
+            '<input type="text" class="form-input" id="ra2211111' + new_id + '" name = "ra2211111' + new_id + '">' +
+            '</div>' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>

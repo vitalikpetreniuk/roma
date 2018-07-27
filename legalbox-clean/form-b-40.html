@@ -1,0 +1,69 @@
+<div class="form-found">
+	<p class="text-title">Назначить ответственным за обработку персональных данных</p>
+	<div class="form-checkbox-list" id="fclm0021">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111433" name="name54" checked>
+			<label for="fc11111433">Руководителя</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111434" name="name54">
+			<label for="fc11111434">Другое лицо</label>
+		</div>
+	</div>
+</div>
+<div class="form-found-list form-first">
+	<div class="form-found-item form-hidden">
+		<span>Должность</span>
+		<input class="form-input" type="text" id="fc11111435">
+	</div>
+	<div class="form-found-item">
+		<span>ФИО</span>
+		<input class="form-input" type="text" id="fc11111436" value="Петров Петр Петрович">
+	</div>
+	<div class="form-found-item">
+		<span>Телефон</span>
+		<input class="form-input" type="tel" id="fc11111437">
+	</div>
+	<div class="form-found-item">
+		<span>Почтовый адрес</span>
+		<input class="form-input" type="text" id="fc11111438">
+	</div>
+	<div class="form-found-item">
+		<span>Адрес электронной почты</span>
+		<input class="form-input" type="email" id="fc11111439">
+	</div>
+</div>
+<div class="form-found-list form-second form-hidden">
+	<div class="form-found-item">
+		<span>Должность</span>
+		<input class="form-input" type="text" id="fc11111446">
+	</div>
+	<div class="form-found-item">
+		<span>ФИО</span>
+		<input class="form-input" type="text" id="fc11111447">
+	</div>
+	<div class="form-found-item">
+		<span>Телефон</span>
+		<input class="form-input" type="tel" id="fc11111448">
+	</div>
+	<div class="form-found-item">
+		<span>Почтовый адрес</span>
+		<input class="form-input" type="text" id="fc11111449">
+	</div>
+	<div class="form-found-item">
+		<span>Адрес электронной почты</span>
+		<input class="form-input" type="email" id="fc11111450">
+	</div>
+</div>
+
+<script>
+    $('#fclm0021 input').on('change', function () {
+        if($('#fc11111433').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+        }
+    });
+</script>

@@ -1,0 +1,289 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:400,500,700&subset=cyrillic,cyrillic-ext,latin-ext");
+@media (max-width: 1179px) {
+  .parallax-1 {
+    left: -178px; }
+  .parallax-2 {
+    right: -70px; }
+  .parallax-3 {
+    bottom: -70px; }
+  .footer-logo {
+    width: 126px; }
+  .footer-menu {
+    width: 274px;
+    padding: 0 48px 0 30px; }
+  .footer-block {
+    width: -webkit-calc(100% - 400px);
+    width: calc(100% - 400px); }
+  .section-form-back .section-form-mid-first {
+    background-position: -webkit-calc(50% + 222px) center;
+    background-position: calc(50% + 222px) center; }
+  .section-form-mid {
+    margin-top: 40px; }
+  .section-form-bottom .back {
+    margin-right: 40px; }
+  .form-step-offset {
+    padding-left: 130px; }
+  .form-step-cont h2 {
+    max-width: 100%; }
+  .form-found-item span {
+    margin-right: 0;
+    width: 264px;
+    padding-right: 10px; }
+  .form-site input {
+    width: 100%; }
+  .form-add-list {
+    max-width: none; }
+  .form-add-left {
+    width: -webkit-calc(100% - 106px);
+    width: calc(100% - 106px); }
+  .form-add-button {
+    width: 106px; }
+  .form-data-body {
+    padding: 15px 16px; } }
+
+@media (max-width: 991px) {
+  .top-menu {
+    display: none; }
+  .menu-toggle {
+    display: block; }
+  .login-button {
+    margin-left: 0; }
+  .footer-logo {
+    width: 120px; }
+  .footer-menu {
+    display: none; }
+  .footer-block {
+    width: -webkit-calc(100% - 120px);
+    width: calc(100% - 120px);
+    padding-left: 30px; }
+  .contacts-item {
+    width: -webkit-calc(100% - 220px);
+    width: calc(100% - 220px); }
+    .contacts-item:nth-child(2n+1) {
+      width: 220px; }
+  .section-form {
+    padding: 44px 0; }
+    .section-form-back {
+      background: url("../img/section-top-s.png") center -webkit-calc(100% + 28px) no-repeat #E5E5E5;
+      background: url("../img/section-top-s.png") center calc(100% + 28px) no-repeat #E5E5E5;
+      padding-bottom: 350px; }
+      .section-form-back .section-form-mid-first {
+        background-image: none; }
+    .section-form-mid {
+      min-height: 336px;
+      padding: 32px 0; }
+  .form-step-offset {
+    padding-left: 150px; }
+  .form-step-cont h2 {
+    display: block;
+    min-height: 0; }
+  .section-form:not(.section-form-back) .section-form-mid {
+    margin-top: 88px;
+    min-height: 496px; }
+  .section-form:not(.section-form-back) .section-form-bottom {
+    padding-top: 65px; }
+  .section-form:not(.section-form-back) .form-step-offset {
+    padding: 64px 0 0; }
+  .section-form:not(.section-form-back) .form-step-nav {
+    left: -webkit-calc(50% - 26px);
+    left: calc(50% - 26px);
+    top: -84px; }
+  .section-form:not(.section-form-back) .form-step-cont h2 {
+    padding-top: 0; }
+  .section-form:not(.section-form-back) .form-found-item {
+    display: block; }
+    .section-form:not(.section-form-back) .form-found-item span {
+      display: block;
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 12px; }
+  .section-form:not(.section-form-back) .form-data {
+    min-height: 582px; }
+  .section-form:not(.section-form-back) .form-add-left {
+    width: -webkit-calc(100% - 90px);
+    width: calc(100% - 90px);
+    padding-right: 5px; }
+  .section-form:not(.section-form-back) .form-add-button {
+    width: 90px; }
+  .section-form:not(.section-form-back) .form-add-item.save {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    -webkit-box-pack: end;
+    -webkit-justify-content: flex-end;
+        -ms-flex-pack: end;
+            justify-content: flex-end; }
+    .section-form:not(.section-form-back) .form-add-item.save .form-add-left {
+      width: 100%;
+      padding-right: 0;
+      margin-bottom: 30px; }
+  .col-form-b {
+    width: 56%; }
+  .col-form-s {
+    width: 44%; } }
+
+@media (max-width: 767px) {
+  .section-form {
+    padding: 16px 0; }
+    .section-form .container {
+      width: 100%; }
+    .section-form h1 {
+      font-size: 18px;
+      line-height: normal;
+      margin-bottom: 16px; }
+    .section-form-top-text {
+      font-size: 14px;
+      line-height: normal; }
+    .section-form-back {
+      padding: 16px 0 24px;
+      background-image: none; }
+    .section-form-mid {
+      margin-top: 48px !important;
+      padding: 48px 0 16px;
+      min-height: 1px !important; }
+    .section-form-bottom {
+      padding-top: 16px; }
+      .section-form-bottom .bttn-big {
+        margin-top: 0; }
+  .section-form:not(.section-form-back) .section-form-bottom {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -webkit-justify-content: space-between;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding-top: 16px; }
+    .section-form:not(.section-form-back) .section-form-bottom.center-xs {
+      -webkit-box-pack: center;
+      -webkit-justify-content: center;
+          -ms-flex-pack: center;
+              justify-content: center; }
+  .form-step-offset {
+    padding: 0 !important; }
+  .form-step-nav {
+    width: 64px;
+    height: 69px;
+    -webkit-background-size: 100% 100%;
+            background-size: 100%;
+    left: -webkit-calc(50% - 32px);
+    left: calc(50% - 32px);
+    top: -84px; }
+    .form-step-nav span:first-child {
+      font-size: 16px;
+      line-height: 20px;
+      right: 30px;
+      top: 20px; }
+    .form-step-nav span:last-child {
+      font-size: 14px;
+      left: 41px;
+      top: 33px;
+      line-height: 18px; }
+      .form-step-nav span:last-child:before {
+        font-size: 14px;
+        line-height: 30px;
+        left: -6px;
+        top: -10px; }
+  .form-step-cont h2 {
+    padding-top: 0;
+    font-size: 16px;
+    line-height: 19px;
+    padding-bottom: 12px;
+    margin-bottom: 24px; }
+  .form-step-cont p {
+    font-size: 12px;
+    line-height: normal;
+    margin-bottom: 24px; }
+  .form-checkbox-list {
+    margin-bottom: 24px; }
+  .form-checkbox-item label {
+    font-size: 12px;
+    line-height: 16px; }
+    .form-checkbox-item label:before {
+      top: 2px; }
+    .form-checkbox-item label:after {
+      top: 6px; }
+  .form-found-item span {
+    font-size: 12px;
+    line-height: normal; }
+  .form-add-item.save .form-add-left {
+    margin-bottom: 24px !important; }
+  .form-add-left {
+    line-height: normal; }
+  .form-end-document-img {
+    margin-bottom: 16px; }
+  .form-end-document-title {
+    font-size: 12px;
+    line-height: normal; }
+  .col-form-b {
+    width: 100%; }
+  .parallax-1 {
+    left: -180px; }
+  .parallax-2 {
+    right: -170px; }
+  .parallax-3 {
+    left: -220px;
+    bottom: -178px; }
+  .header-in {
+    padding: 8px 0; }
+  .header-block {
+    display: none; }
+  .logo-top {
+    width: 80px; }
+  .menu-toggle {
+    position: static; }
+  .menu-block-header {
+    padding: 8px 0; }
+  .menu-block-logo {
+    width: 80px; }
+  .menu-block-body {
+    height: -webkit-calc(100vh - 225px);
+    height: calc(100vh - 225px); }
+    .menu-block-body li + li {
+      margin-top: 10px; }
+    .menu-block-body a {
+      font-size: 16px; } }
+
+@media (max-height: 670px) {
+  .menu-block-body {
+    height: -webkit-calc(100vh - 270px);
+    height: calc(100vh - 270px); } }
+
+@media (max-width: 620px) {
+  footer .socials {
+    position: absolute;
+    left: 0;
+    top: 112px; }
+  .footer-in {
+    position: relative; }
+  .footer-block {
+    padding-left: 40px; }
+  .contacts-list {
+    display: block; }
+  .contacts-item {
+    width: 100% !important;
+    padding: 0 !important;
+    line-height: 17px; }
+  .contacts-title, .contacts-cont {
+    font-size: 14px; }
+  .work-time {
+    font-size: 14px;
+    line-height: 17px; } }
+
+@media (max-height: 420px) {
+  .menu-block-body {
+    height: -webkit-calc(100vh - 194px);
+    height: calc(100vh - 194px); }
+  .menu-block-footer .login-button {
+    margin-bottom: 15px !important; } }
+
+@media (max-height: 360px) {
+  .menu-block-body li + li {
+    margin-top: 5px; }
+  .menu-block-body a {
+    font-size: 14px; }
+  .menu-block-footer .socials a {
+    width: 40px; }
+    .menu-block-footer .socials a img {
+      width: 100%; } }

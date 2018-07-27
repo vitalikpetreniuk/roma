@@ -1,0 +1,59 @@
+<div class="form-found">
+	<p class="text-title">На каких должностях у вас допущены работники к обработке персональных данных</p>
+	<div class="form-checkbox-list form-checkbox-list-main">
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fd10111440" name="fd10name55">
+			<label for="fd10111440">Генеральный директор</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fd10111441" name="fd10name55">
+			<label for="fd10111441">Бухгалтер</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fd10111442" name="fd10name55">
+			<label for="fd10111442">Кадровый работник</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="checkbox" id="fd10111443" name="fd10name55">
+			<label for="fd10111443">Менеджер отдела продаж</label>
+		</div>
+		<div class="form-checkbox-item form-double form-double" id="fd100092">
+			<input type="checkbox" id="fd10111444" name="fd10name55">
+			<label for="fd10111444">Иные должности</label>
+			<input type="text" id="fd10111445" class="form-input">
+		</div>
+		<a href="#" id = "fd10add01" class="add-form bttn form-hidden">Добавить должность</a>
+	</div>
+	<script>
+        $('#fd100092 input').on('change', function () {
+            if($('#fd10111444').is(':checked')){
+                $('#fd10add01').removeClass('form-hidden');
+            }else {
+                $('#fd10add01').addClass('form-hidden');
+                $('#fd100092').find('.editional-input').remove();
+            }
+        });
+        $('body').on('click','.goal-input .del-item', function (e) {
+            e.preventDefault();
+            $(this).parent().remove();
+            if($('#fd100092 .goal-input').length < 9){
+                $('#fd10add01').removeClass('form-hidden');
+            }
+        });
+        var new_id = 0;
+        $('#fd10add01').on('click', function (e){
+            e.preventDefault();
+            new_id += 1;
+            if($('#fd100092 .goal-input').length < 9){
+                $(this).siblings('.form-double').append(
+                    '<div class="editional-input goal-input">' +
+                    '<input id="fd10a117' + new_id + '" class="form-input" type="text"  name = "fd10name1">' +
+                    '<button class="del-item"></button>'+
+                    '</div>');
+            }
+            if($('#fd100092 .goal-input').length === 9){
+                $(this).addClass('form-hidden');
+            }
+        });
+	</script>
+</div>

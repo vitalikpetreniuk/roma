@@ -1,0 +1,252 @@
+<div class="form-found">
+    <p class="text-title">Укажите Ваш ИНН</p>
+    <div class="form-inn">
+        <input id="inn" class="form-input form-input-big input-inn" type="text" placeholder='' value="">
+    </div>
+</div>
+<div class="form-found form-first form-hidden" id="legal-person">
+    <div class="form-found-list form-hidden">
+        <div class="form-found-item">
+            <span>Наименование</span>
+            <input class="form-input" id="company_name" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>ОГРН</span>
+            <input class="form-input" id="ogrn" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>КПП</span>
+            <input class="form-input" id="kpp" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>Место нахождения</span>
+            <input class="form-input" id="adress" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item" id="fd010001">
+            <span>Фактический адрес местонахождения совпадает с юридическим?</span>
+            <div class="form-checkbox-list">
+                <div class="form-checkbox-item">
+                    <input type="radio" id="fd0100011" name="fdqT7gE">
+                    <label for="fd0100011">Да</label>
+                </div>
+                <div class="form-checkbox-item">
+                    <input type="radio" id="fd0100012" name="fdqT7gE">
+                    <label for="fd0100012">Нет</label>
+                    <script>
+                        $('#fd010001 input').on('change', function () {
+                            if($('#fd0100012').is(':checked')){
+                                $('#actual-address-form').removeClass('form-hidden');
+                            }else  if($('#fd0100011').is(':checked')){
+                                $('#actual-address-form').addClass('form-hidden');
+                            }
+                        });
+                    </script>
+                </div>
+            </div>
+        </div>
+        <div class="form-found-item form-hidden" id="actual-address-form">
+            <span>Укажите фактический адрес местонахождения</span>
+            <input class="form-input" id="adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+    </div>
+</div>
+<div class="form-found form-first form-hidden" id="entrepreneur">
+    <div class="form-found-list form-hidden">
+        <div class="form-found-item">
+            <span>ФИО</span>
+            <input class="form-input" type="text" id="fio" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>ОГРНИП</span>
+            <input class="form-input" type="text" id="ogrnip" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item">
+            <span>№ свидетельства о государственной регистрации</span>
+            <input class="form-input" type="text" id="gos_reg_number" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+        <div class="form-found-item form-found-item-date">
+            <span>Дата государственной регистрации</span>
+            <select class="form-input" type="text" id="gos_reg_day" name="gos_reg_day">
+                <option>01</option>
+                <option>02</option>
+                <option>03</option>
+                <option>04</option>
+                <option>05</option>
+                <option>06</option>
+                <option>07</option>
+                <option>08</option>
+                <option>09</option>
+                <option>10</option>
+                <option>11</option>
+                <option>12</option>
+                <option>13</option>
+                <option>15</option>
+                <option>16</option>
+                <option>17</option>
+                <option>18</option>
+                <option>19</option>
+                <option>20</option>
+                <option>21</option>
+                <option>22</option>
+                <option>23</option>
+                <option>24</option>
+                <option>25</option>
+                <option>26</option>
+                <option>27</option>
+                <option>28</option>
+                <option>29</option>
+                <option>30</option>
+                <option>31</option>
+            </select>
+            <select class="form-input" type="text" id="gos_reg_month" name="gos_reg_month">
+                <option>январь</option>
+                <option>февраль</option>
+                <option>март</option>
+                <option>апрель</option>
+                <option>май</option>
+                <option>июнь</option>
+                <option>июль</option>
+                <option>август</option>
+                <option>сентябрь</option>
+                <option>октябрь</option>
+                <option>ноябрь</option>
+                <option>декабрь</option>
+            </select>
+            <select class="form-input" type="text" id="gos_reg_year" name="gos_reg_year">
+                <option>2018</option>
+                <option>2017</option>
+                <option>2016</option>
+                <option>2015</option>
+                <option>2014</option>
+                <option>2013</option>
+                <option>2012</option>
+                <option>2011</option>
+                <option>2010</option>
+                <option>2009</option>
+                <option>2008</option>
+                <option>2007</option>
+                <option>2006</option>
+                <option>2005</option>
+                <option>2004</option>
+                <option>2003</option>
+                <option>2002</option>
+                <option>2001</option>
+                <option>2000</option>
+                <option>1999</option>
+                <option>1998</option>
+                <option>1997</option>
+                <option>1996</option>
+                <option>1995</option>
+                <option>1994</option>
+                <option>1993</option>
+                <option>1992</option>
+                <option>1991</option>
+                <option>1990</option>
+            </select>
+        </div>
+        <div class="form-found-item" id="ip-address-form">
+            <span>Укажите адрес осуществления вашей деятельности</span>
+            <input class="form-input" id="ip-adressfact" type="text" placeholder="_ _ _ _ _ _ _ _ _ _ _ _">
+        </div>
+    </div>
+</div>
+<script>
+    $(document).ready(function() {
+
+        $('#inn').on('input', function() {
+            var value = $(this).val().trim();
+            $(this).val(value);
+
+            //                                              alert(this.value.length);
+            //if (this.value.length==10) alert('Inn litso'); else
+            var settings = {
+                "async": true,
+                "crossDomain": true,
+                "url": `https://suggestions.dadata.ru/suggestions/api/4_1/rs/findById/party?query=${value}`,
+                "method": "GET",
+                "headers": {
+                    "content-type": "application/json",
+                    "authorization": "Token 849e43c0e60aaf7787190b4edcaa24c8f2892b9e",
+                    "accept": "application/json",
+                    "cache-control": "no-cache",
+                    "postman-token": "b801735a-ec52-89de-c4d4-6231078adbee"
+                },
+                "processData": false,
+                "data": "{ \"query\": \"7719402047\" }"
+            };
+            if (this.value.length == 10) {
+                //open the form , and autofill it
+
+                $.ajax(settings).done(function(response) {
+                    //                                                      alert(response.length);
+                    //                                                      alert(response[0]["value"]);
+                    if (response["suggestions"].length == 0) {
+                        $('#company_name').val("");
+                        $('#ogrn').val("");
+                        $('#kpp').val("");
+                        $('#adress').val("");
+                        $("#fc11111457").val("");
+
+                        $(".pop-up__validity--inn").addClass('active');
+                        return;
+                    }
+                    var responseJson = response["suggestions"][0];
+                    $('#company_name').val(responseJson["value"]);
+                    $("#fc11111457").val(responseJson["value"]);
+                    $('#ogrn').val(responseJson["data"]["ogrn"]);
+                    $('#kpp').val(responseJson["data"]["kpp"]);
+                    $('#adress').val(responseJson["data"]["address"]["value"]);
+
+                    console.log(JSON.stringify(response));
+                });
+                $('#legal-person').removeClass('form-hidden');
+                $('#legal-person .form-found-list').removeClass('form-hidden');
+                //$("#oooOrIp").text("ООО");
+                $('#rightsowner').removeClass('form-hidden');
+            } else {
+                //hide form for legal-person
+                $('#legal-person').addClass('form-hidden');
+                $('#legal-person .form-found-list').addClass('form-hidden');
+            }
+            if (this.value.length == 12) {
+
+                //same thing: open form, autofill it for entrepreneur
+
+                $.ajax(settings).done(function(response) {
+                    //                                                      alert(response.length);
+                    //                                                      alert(response[0]["value"]);
+                    if (response["suggestions"].length == 0) {
+                        $('#fio').val("");
+                        $('#ogrnip').val("");
+                        $("#fc11111457").val("");
+                        $(".pop-up__validity--inn").addClass('active');
+
+                        return;
+                    }
+
+                    var responseJson = response["suggestions"][0];
+                    $('#fio').val(responseJson["value"]);
+                    $("#fc11111457").val(responseJson["value"]);
+                    $('#ogrnip').val(responseJson["data"]["ogrn"]);
+
+                });
+                $('#entrepreneur').removeClass('form-hidden');
+                $('#entrepreneur .form-found-list').removeClass('form-hidden');
+                //$("#oooOrIp").text("ИП");
+                $('#rightsowner').removeClass('form-hidden');
+
+            } else {
+                // otherwise we're not dealing with entrepreneur, hide everything
+                $('#entrepreneur').addClass('form-hidden');
+                $('#entrepreneur .form-found-list').addClass('form-hidden');
+
+            }
+
+            if ((this.value.length != 10) && (this.value.length != 12)) {
+                $('#rightsowner').addClass('form-hidden');
+            }
+
+        });
+
+    });
+</script>

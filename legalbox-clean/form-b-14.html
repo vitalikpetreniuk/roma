@@ -1,0 +1,70 @@
+<div class="form-found">
+	<p class="text-title">Передаете ли вы персональные данные сотрудников (гпх) третьим лицам</p>
+	<div class="form-checkbox-list" id="fclm0004">
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111221" name="name17" checked>
+			<label for="fc11111221">Да, в другие организации</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111222" name="name17">
+			<label for="fc11111222">Да, в государственные органы</label>
+		</div>
+		<div class="form-checkbox-item">
+			<input type="radio" id="fc11111223" name="name17">
+			<label for="fc11111223">Не передаю</label>
+		</div>
+	</div>
+</div>
+<div class="form-found form-first">
+	<p class="text-title"> Укажите ИНН компании, в которую вы передаете персональные данные</p>
+	<div class="form-inn">
+		<input id="fc11111224" class="form-input form-input-big input-inn" type="text" placeholder="111222333444">
+	</div>
+</div>
+<div class="form-found form-hidden form-second">
+	<p class="text-title"> Укажите официальное название государственного органа, в который вы передаете персональные данные</p>
+	<div class="form-checkbox-list">
+		<div class="form-checkbox-item">
+			<input type="text" class="form-input" id="fc11111225">
+		</div>
+	</div>
+</div>
+<a href="#" id = "add2" class="add-form bttn">Добавить компанию</a>
+
+<script>
+    $('#fclm0004 input').on('change', function () {
+        if($('#fc11111221').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').removeClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+            $('.add-form.bttn').removeClass('form-hidden');
+        }else if($('#fc11111222').is(':checked')){
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').removeClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
+        }else{
+            $(this).closest('.question-in-slider').find('.form-first').addClass('form-hidden');
+            $(this).closest('.question-in-slider').find('.form-second').addClass('form-hidden');
+            $('.add-form.bttn').addClass('form-hidden');
+            $('.editional-input').hide();
+        }
+    });
+    var new_id = 1;
+    $('#add2').on('click', function (e) {
+        e.preventDefault();
+        new_id += 1;
+        $(this).siblings('.form-found.form-first').append(
+            '<div class="form-found form-first editional-input">' +
+            '<p>Укажите ИНН дополнительной компании, в которую вы передаете персональные данные</p>' +
+            '<div class="form-inn">' +
+            '<input id="inn141111' + new_id + '" class="form-input form-input-big input-inn" type="text" placeholder="111222333444" name = "inn141111' + new_id + '">' +
+            '</div>' +
+            '<button class="del-item"></button>'+
+            '</div>');
+
+    });
+    $('body').on('click','.del-item', function (e) {
+        e.preventDefault();
+        $(this).parent().hide();
+    });
+</script>
